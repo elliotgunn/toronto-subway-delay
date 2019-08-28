@@ -29,17 +29,13 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
         
-            ## Value Proposition
+            ## How Long Is My Delay?
 
-            Emphasize how the app will benefit users. Don't emphasize the underlying technology.
-
-            ✅ RUN is a running app that adapts to your fitness levels and designs personalized workouts to help you improve your running.
-
-            ❌ RUN is the only intelligent running app that uses sophisticated deep neural net machine learning to make your run smarter because we believe in ML driven workouts.
+            Subway delays are nearly a daily occurence in Toronto. This app allows commuters to predict the length of delay and plan alternate routes for an improved commuting experience.
 
             """
         ),
-        dcc.Link(dbc.Button('Call To Action', color='primary'), href='/predictions')
+        dcc.Link(dbc.Button('Calculate My Delay', color='primary'), href='/predictions')
     ],
     md=4,
 )
