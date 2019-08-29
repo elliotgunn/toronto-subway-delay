@@ -17,9 +17,6 @@ column1 = dbc.Col(
 
             2. Surprisingly, and contrary to academic literature and domain knowledge, bad weather is weakly correlated with delays.
 
-            html.Img(src='assets/2_heatmap.png', className='img-fluid')
-
-
             3. Almost a third of all delays can be attributed to operator speed management. Passenger-activated false alarms come in as the next most important reason behind delays.
 
             4. [Feature importances chart] The variable `Min Gap` is overwhelmingly key to predicting delays. It is potentially a source of leakage, but included in this model pending a more suitable substitute engineered feature. It has been shown in ML models done elsewhere that capturing the "ripple effect" of a delay on the system is an important predictor of future delays.
@@ -45,6 +42,10 @@ column1 = dbc.Col(
 
 column2 = dbc.Col(
     [
+    html.Img(src='assets/2_skew.png', className='img-fluid')
+
+    html.Img(src='assets/2_heatmap.png', className='img-fluid')
+
         
     ]
 )
