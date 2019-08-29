@@ -31,7 +31,7 @@ column1 = dbc.Col(
         
             ## How Long Is My Delay?
 
-            Subway delays are nearly a daily occurence in Toronto. This app allows commuters to predict the length of delay and plan alternate routes for an improved commuting experience.
+            Subway delays are a near daily occurence in Toronto. This app allows commuters to predict the length of delay and plan their routes for an improved commuting journey. It is also useful for train infrastructure enthusiasts to explore factors behind train delays in one of North American's largest cities.
 
             """
         ),
