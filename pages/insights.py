@@ -4,6 +4,7 @@ import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
 
+
 from app import app
 
 column1 = dbc.Col(
@@ -21,7 +22,7 @@ column1 = dbc.Col(
 
             4. [Feature importances chart] The variable `Min Gap` is overwhelmingly key to predicting delays. It is potentially a source of leakage, but included in this model pending a more suitable substitute engineered feature. It has been shown in ML models done elsewhere that capturing the "ripple effect" of a delay on the system is an important predictor of future delays.
 
-            5. 
+            5. The top delays occur at the ends of the subway line. 
 
             6. 
 
@@ -42,12 +43,10 @@ column1 = dbc.Col(
 
 column2 = dbc.Col(
     [
-    html.Img(src='assets/2_skew.png', className='img-fluid')
-
-    html.Img(src='assets/2_heatmap.png', className='img-fluid')
-
-        
+        html.Img(src='assets/1_skew.png', className='img-fluid'),
     ]
 )
 
 layout = dbc.Row([column1, column2])
+
+

@@ -51,3 +51,5 @@ column2 = dbc.Col(
 )
 
 layout = dbc.Row([column1, column2])
+
+fig =     html.Img(src='assets/1_skew.png', className='img-fluid')
