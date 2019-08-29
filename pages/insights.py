@@ -15,38 +15,70 @@ column1 = dbc.Col(
             ## Insights
 
             1. Train delay data is extremely skewed, mostly 0, raising questions about data collection methods.
-
-            2. Surprisingly, and contrary to academic literature and domain knowledge, bad weather is weakly correlated with delays.
-
-            3. Almost a third of all delays can be attributed to operator speed management. Passenger-activated false alarms come in as the next most important reason behind delays.
-
-            4. [Feature importances chart] The variable `Min Gap` is overwhelmingly key to predicting delays. It is potentially a source of leakage, but included in this model pending a more suitable substitute engineered feature. It has been shown in ML models done elsewhere that capturing the "ripple effect" of a delay on the system is an important predictor of future delays.
-
-            5. The top delays occur at the ends of the subway line. 
-
-            6. 
-
-            7. PDP
-
-            8. A good prediction: Shapley values
-
-            9. A bad prediction:
-            Shapley values
-
-
             """
         ),
+        html.Div([
+            html.Img(src='assets/skew.png', className='img-fluid'),
+        ]),
+        dcc.Markdown(
+            """
+
+            2. Surprisingly, and contrary to academic literature and domain knowledge, bad weather is weakly correlated with delays.
+            """
+        ),
+        html.Div([
+            html.Img(src='assets/heatmap.png', className='img-fluid'),
+        ]),
+         dcc.Markdown(
+            """
+
+            3. Almost a third of all delays can be attributed to operator speed management. Passenger-activated false alarms come in as the next most important reason behind delays.
+            """
+        ),
+        html.Div([
+            html.Img(src='assets/heatmap.png', className='img-fluid'),
+        ]),       
+         dcc.Markdown(
+            """
+
+            4. The variable `Gap` is overwhelmingly key to predicting delays. It is potentially a source of leakage, but included in this model pending a more suitable substitute engineered feature. It has been shown in ML models done elsewhere that capturing the "ripple effect" of a delay on the system is an important predictor of future delays.
+            """
+        ),
+        html.Div([
+            html.Img(src='assets/importances.png', className='img-fluid'),
+        ]),
+         dcc.Markdown(
+            """
+
+            5. The top delays occur at the ends of the subway line.
+            """
+        ),
+        html.Div([
+            html.Img(src='assets/importances.png', className='img-fluid'),
+        ]),
+         dcc.Markdown(
+            """
+
+            6. PDP
+            """
+        ),
+        html.Div([
+            html.Img(src='assets/pdp.png', className='img-fluid'),
+        ]),
+         dcc.Markdown(
+            """
+
+            7. Shapley
+            """
+        ),
+        html.Div([
+            html.Img(src='assets/pdp.png', className='img-fluid'),
+        ]),
+
     ],
-    md=4,
+    md=12,
 )
 
-
-column2 = dbc.Col(
-    [
-        html.Img(src='assets/1_skew.png', className='img-fluid'),
-    ]
-)
-
-layout = dbc.Row([column1, column2])
+layout = dbc.Row([column1])
 
 
