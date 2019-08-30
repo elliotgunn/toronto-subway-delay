@@ -57,7 +57,9 @@ column1 = dbc.Col(
          dcc.Markdown(
             """
 
-            6. PDP
+            6. Partial dependence plots show the marginal effect a feature (or two features) have on the predicted outcome variable. It can show whether the relationship between target and a feature is linear, monotonic, or something else. The plot below shows a PDP of hours in a day as a predictor of train delays. 
+
+
             """
         ),
         html.Div([
@@ -66,11 +68,14 @@ column1 = dbc.Col(
          dcc.Markdown(
             """
 
-            7. Shapley
+            7. Shapley value plots allow us to look at an individual prediction to see the impact of each feature. 
+
+            In this example, looking at just three features in the model, we see the baseline starts at 2 minutes, and `Gap` is the most influential feature for pushing it to 3 minutes.
+
             """
         ),
         html.Div([
-            html.Img(src='assets/pdp.png', className='img-fluid'),
+            html.Img(src='assets/shapley.png', className='img-fluid'),
         ]),
 
     ],
